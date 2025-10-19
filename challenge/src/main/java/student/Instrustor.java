@@ -2,7 +2,12 @@ package student;
 
 public class Instrustor extends Person {
     private String employeeNumber;
+    private Subject subject;
 
+    public Instrustor(String employeeNumber, Subject subject){
+        this.employeeNumber = employeeNumber;
+        this.subject  = subject;
+    }
 
     public String cleanEmployeeNumber(String employeeNumber){
         return employeeNumber.replaceAll(" ","");

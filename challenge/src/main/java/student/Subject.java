@@ -12,9 +12,27 @@ public class Subject {
         }
         return String.join("",words);
     }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public String getCode() {
+        return code;
+    }
+
+    public void setCode(String code) {
+        this.code = code;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
     public boolean isIntroCourse(){
         return this.title.toLowerCase().contains("intro") || this.code.toLowerCase().startsWith("INTRO-");
     }
+
     public String syllabusLine(Instrustor instrustor ){
         StringBuilder res = new StringBuilder();
         res.append(this.code+" - ");

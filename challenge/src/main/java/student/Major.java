@@ -52,7 +52,7 @@ public class Major {
     }
 
     public double getOccupancyRate(){
-        return this.studentCount/50;
+        return (this.studentCount/50)*100;
     }
 
     public StringBuilder getStudentListAsString(){
@@ -84,7 +84,7 @@ public class Major {
 
     // Display all students in the major
     public void displayStudents() {
-        System.out.println(String.format("The list of students in the %s major is: %d",this.name,this.studentCount));
+        System.out.println(String.format("The list of students in the %s major is: ",this.name));
         if (this.code == "23")
             this.students = Major.csStudents;
         int i = 0;
